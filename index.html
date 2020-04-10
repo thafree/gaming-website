@@ -4,8 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Player</title>
 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+
     <style>
-        .card {
+        .my-card {
             height: 250px;
             width: 250px;
             background-size: contain;
@@ -20,12 +28,12 @@
             transition: 0.2s;
         }
 
-        .card:hover {
+        .my-card:hover {
             transform: scale(1.5);
             z-index: 2;
         }
 
-        .share {
+        .my-card i {
             opacity: 0;
             width: 50px;
             height: 50px;
@@ -33,43 +41,76 @@
             top:0;
             right:0;
             cursor: pointer;
+            color:turquoise;
 
             transition: all 0.2s ease;
             transition-delay: 0.2s;
         }
 
-        .card:hover .share {
+        .my-card:hover i {
             opacity: 1;
         }
+
+        .my-card .join-btn {
+            position:absolute;
+            bottom:0;
+            right: 76px;
+            display: none;
+        }
+
+        .my-card:hover .join-btn {
+            display:block;
+        }
+
+        .my-card span {
+            color: #00ffc4;
+        }
+
     </style>
 </head>
-<body style="background-image: url('https://www.ecopetit.cat/wpic/mpic/70-700282_darkness.png'); background-size: contain; color: white;">
+<body style="background-image: url('https://www.ecopetit.cat/wpic/mpic/70-700282_darkness.png'); background-size: cover; color: white; background-repeat: no-repeat;">
 
     <h2>Welcome</h2>
 
+    
+
     <p>This site is dedicated to <b>gaming!</b></p>
-    <p style="color:silver;">If you want to join me in your favorite game send me your user name then hit the game you want to play
+    <p style="color:silver;">If you want to join me in your favorite game send me your user name then hit the game you want to play then hit join game
 
     </p>
 
-    <div class="card" style="background-image: url('https://i.insider.com/5c366de02a5b7442d75cda92?width=1100&format=jpeg&auto=webp');">
-        Fortnite
-        <img src="https://lh3.googleusercontent.com/proxy/8IJ480zXVRF0GMBm6LRxFlb8Y1RyX2GJ02C7vTLZiAh1N7FmjOuxMt_HxdL4wip78LYuRAwa-7Sas1_lXq3Xnoky6-73lh7_eO_zR7hu_WU7TkX_LAqYcSmtGTQoiExXM7KSUdiG2Kztv_RsuCI" alt="" class="share">
-        
-    </div>
-    <div class="card" style="background-image: url('https://www.vippng.com/png/detail/491-4915434_rocket-league-logo-png-rocket-league-logo-render.png');">
-        Rocket League
-        <img src="https://lh3.googleusercontent.com/proxy/8IJ480zXVRF0GMBm6LRxFlb8Y1RyX2GJ02C7vTLZiAh1N7FmjOuxMt_HxdL4wip78LYuRAwa-7Sas1_lXq3Xnoky6-73lh7_eO_zR7hu_WU7TkX_LAqYcSmtGTQoiExXM7KSUdiG2Kztv_RsuCI" alt="" class="share">
-    </div>
-    <div class="card" style="background-image: url('https://static.toiimg.com/photo/74694192.cms');">
-        WarZone
-        <img src="https://lh3.googleusercontent.com/proxy/8IJ480zXVRF0GMBm6LRxFlb8Y1RyX2GJ02C7vTLZiAh1N7FmjOuxMt_HxdL4wip78LYuRAwa-7Sas1_lXq3Xnoky6-73lh7_eO_zR7hu_WU7TkX_LAqYcSmtGTQoiExXM7KSUdiG2Kztv_RsuCI" alt="" class="share">
-    </div>
-    <div class="card" style="background-image: url('https://i.ytimg.com/vi/orzSOPhm6_8/maxresdefault.jpg');">
-        Realm Royale
-        <img src="https://lh3.googleusercontent.com/proxy/8IJ480zXVRF0GMBm6LRxFlb8Y1RyX2GJ02C7vTLZiAh1N7FmjOuxMt_HxdL4wip78LYuRAwa-7Sas1_lXq3Xnoky6-73lh7_eO_zR7hu_WU7TkX_LAqYcSmtGTQoiExXM7KSUdiG2Kztv_RsuCI" alt="" class="share">
-    </div>
 
+    <div>
+
+        <div class="my-card" style="background-image: url('https://i.insider.com/5c366de02a5b7442d75cda92?width=1100&format=jpeg&auto=webp');">
+            <span>Fortnite</span> 
+            
+            <i class="material-icons">share</i>
+            <a class="waves-effect waves-light btn join-btn" href="https://www.epicgames.com/fortnite/en-US/home" target="_new">join game</a>
+        </div>
+    
+        <div class="my-card" style="background-image: url('https://www.vippng.com/png/detail/491-4915434_rocket-league-logo-png-rocket-league-logo-render.png');">
+            <span>Rocket League</span>
+            <i class="material-icons">share</i>
+            <a class="waves-effect waves-light btn join-btn" href="https://www.rocketleague.com/game-info/rocketpass/rocket-pass-6/?gclid=CjwKCAjwssD0BRBIEiwA-JP5rJ-t4xeBbxUGH9_Ke2yQOAADztoP0MNHgW_XMGM-raepwCJa3RZSLxoCfyQQAvD_BwE&gclsrc=aw.ds" target="_new">join game</a>
+        </div>
+    
+        <div class="my-card" style="background-image: url('https://static.toiimg.com/photo/74694192.cms');">
+            <span>WarZone</span>
+            <i class="material-icons">share</i>
+            <a class="waves-effect waves-light btn join-btn" href="https://www.callofduty.com/warzone" target="_new">join game</a>
+        </div>
+    
+        <div class="my-card" style="background-image: url('https://i.ytimg.com/vi/orzSOPhm6_8/maxresdefault.jpg');">
+            <span>Realm Royale</span>
+            <i class="material-icons">share</i>
+            <a class="waves-effect waves-light btn join-btn" href="https://www.realmroyale.com/" target="_new">join game</a>
+        </div>
+
+
+    </div>
+ 
+    
 
 
 </body>
